@@ -90,7 +90,7 @@ jobs:
             C214/target/site/
 
   notification:
-    needs: teste
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
