@@ -107,6 +107,7 @@ jobs:
           fi
 
       - name: Run notification script (entra em Aprendendo_test)
-        run: |
-          # passa o caminho preferencial (Aprendendo_test) para o script
-          ./scripts/shell.sh ./Aprendendo_test
+        env:
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: ./scripts/shell.sh "$EMAIL_TO"
+
